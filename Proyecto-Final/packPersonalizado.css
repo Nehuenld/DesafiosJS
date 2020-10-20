@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    background-color: #222222;
+    font-family: 'Roboto Slab', serif;
+    scroll-behavior: smooth;
+    color: white;
+    text-align: center;
+}
+.formulario

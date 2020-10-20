@@ -1,0 +1,297 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  background-color: #222222;
+  font-family: 'Roboto Slab', serif;
+  scroll-behavior: smooth;
+  color: white;
+  text-align: center;}
+h1{
+  font-size: calc(3em + 3vw);
+}
+h2{
+  font-size: calc(2em + 2vw);
+}
+h3{
+  font-size: calc(1.5em + 1.5vw);
+}
+h4{
+  font-size: calc(1em + 1vw);
+}
+h5{
+  font-size: calc(0.75em + 0.75vw);
+}  
+h6{
+  font-size: calc(0.5em + 0.5vw);
+}
+.carrito{
+  position: sticky;
+  top: 2%;
+  z-index:2;
+  background-color: transparent;
+  width: 100%;
+}
+ ion-icon{
+  position: relative;
+  font-size: 56px;
+  color: white;
+  left: 43%;
+  background-color: transparent;
+}
+#landingPage{
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.textoLanding{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color:white
+}
+
+.content {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+}
+#more-arrows {
+  width: 75px;
+  height: 65px;
+}
+#more-arrows:hover polygon {
+  fill: #fff;
+  transition: all 0.2s ease-out;
+}
+#more-arrows:hover polygon.arrow-bottom {
+  transform: translateY(-18px);
+}
+#more-arrows:hover polygon.arrow-top {
+  transform: translateY(18px);
+}
+polygon {
+  fill: #fff;
+  transition: all 0.2s ease-out;
+}
+polygon.arrow-middle {
+  opacity: 0.75;
+}
+polygon.arrow-top {
+  opacity: 0.5;
+}
+#comoFunciona{
+  height: 90vh;
+  width: 100%;
+  text-align: center;
+  padding-top: 10vh;
+}
+.funcionamiento{
+  display:flex;
+  height: 80vh;
+}
+@media only screen and (max-width: 992px) {
+  .funcionamiento{
+    flex-direction: column;
+    width: 85%;
+    margin-left: 5%;
+    height: 0vh;
+  }
+#packClases{
+    padding-top: 0vh;
+  }
+}
+.personalizado{
+  border-bottom: solid white 2px;
+}
+.linkPersonalizado{
+  padding-top: 10vh;
+}
+.pasos{
+  width: 40%;
+  padding: 0px 10px 0 30px;
+  padding-top: 20vh;
+}
+#packClases{
+  height: 100vh;
+  width: 100%;
+  padding-top: 0vh;
+}
+
+#packClases h2{
+  padding-bottom: 10vh;
+}
+
+.pricing-table {
+  display: table;
+  width:95%;
+}
+.pricing-table .pricing-option {
+  width: 28%;
+  float: left;
+  padding: 2%;
+  text-align: center;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+.pricing-table .pricing-option:nth-child(even) {
+  margin: 0 2%;
+}
+.pricing-table .pricing-option:hover {
+  cursor: pointer;
+  box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.3);
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
+}
+.pricing-table .pricing-option:hover i, .pricing-table .pricing-option:hover h1, .pricing-table .pricing-option:hover span, .pricing-table .pricing-option:hover b {
+  color: white;
+}
+.pricing-table .pricing-option:hover .front {
+  opacity: 0;
+  visibility: hidden;
+}
+.pricing-table .pricing-option:hover .back {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.pricing-table .pricing-option:hover .back a.button {
+  -webkit-transform: translateY(0px) !important;
+          transform: translateY(0px) !important;
+}
+.pricing-table .pricing-option hr {
+  border: none;
+  border-bottom: 1px solid #F0F0F0;
+}
+.pricing-table .pricing-option i {
+  font-size: 3rem;
+  color: #D8D8D8;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+.pricing-table .pricing-option h1 {
+  margin: 10px 0;
+  color: white;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+.pricing-table .pricing-option p {
+  color: #999;
+  padding: 0 10px;
+  line-height: 1.3;
+}
+.pricing-table .pricing-option .price {
+  position: relative;
+}
+.pricing-table .pricing-option .price .front span.price {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-top: 20px;
+  display: block;
+  font-weight: 700;
+  position: relative;
+}
+.pricing-table .pricing-option .price .front span.price b {
+  position: absolute;
+  font-size: 1rem;
+  margin-left: 2px;
+  font-weight: 600;
+}
+.pricing-table .pricing-option .price .back {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+.pricing-table .pricing-option .price .back a.button {
+  background: #111111;
+  padding: 15px 20px;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  font-size: 13px;
+  top: -5px;
+  left: 0;
+  right: 0;
+  width: 150px;
+  margin: auto;
+  text-transform: uppercase;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+.pricing-table .pricing-option .price .back a.button:hover {
+  background: white;
+  color: black;
+}
+
+@media screen and (max-width: 1000px) {
+  .pricing-table .pricing-option {
+    padding: 5%;
+    width: 90%;
+  }
+  .pricing-table .pricing-option:nth-child(even) {
+    margin: 30px 0 !important;
+  }
+  #nosotros{
+    margin-top: 170vh;
+  }
+}
+
+#nosotros h2{
+  padding-bottom: 2vh;
+}
+#nosotros{
+  height: 100vh;
+  width: 100%;
+  padding-top: 20vh;
+}
+.profesores{
+  width:100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 40vh;
+}
+
+@media only screen and (max-width: 992px) {
+  .profesores{
+    flex-direction: column;
+}
+  .item{
+    padding: 50px 50px 50px 50px;
+  }
+}
+.porqueNosotros{
+  height: 100vh;
+  width: 100%;
+}
+.porqueNosotros h2{
+  padding-bottom: 10vh;
+}
+.itemNosotros{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+@media only screen and (max-width: 992px) {
+  .itemNosotros{
+    flex-direction: column;
+  }
+  .porqueNosotros{
+    padding-top: 60vh;
+  }
+}
+.cartaNosotros{
+  padding:10px;
+}
+.cartaNosotros h5{
+  font-weight: 400;
+}
+#contacto{
+
+}
