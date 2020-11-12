@@ -40,8 +40,10 @@ h6{
   left: 43%;
   background-color: transparent;
 }
-ion-icon :hover{
-
+ion-icon :active{
+  display:flex;
+  height:100vh;
+  cursor:pointer;
 }
 #landingPage{
   height: 100vh;

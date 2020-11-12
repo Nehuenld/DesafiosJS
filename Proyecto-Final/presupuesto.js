@@ -1,26 +1,20 @@
+//Esto seria un form para conseguir la informacion basica del usuario como la provincia , numero de telefono , 
+//nombre completo o la edad para poder mostrar un presupuesto mas acertado a sus necesidades .Esto se sube al local storage
+//para poder usarlo despues
 
-function presupuesto(edad,primeraVez,teorico,practico,total) {
-    alert("Para empezar con tu presupuesto personalizado nos gustaria preguntarte unas cosas para hacer tu pack de clases lo mas acertado a tus necesidades.")
-    edad=prompt("Cual es tu edad?")
-    if (edad <14) {
-        alert("La edad minima para empezar el curso de manejo es de 15 años")
-    }
+var presupuesto =document.getElementById("presupuesto")
 
-     else {
-        primeraVez=prompt("Es tu primera vez sacando el registro?").toLocaleLowerCase()
-        if (primeraVez=="si") {
-            alert("El promedio de clases que necesita cada alumno para tener el nivel necesario para poder conseguir el registro son de 14 practicas y 7 teorias. Usa esto de guia para ver cuantas clases vas a necesitar")
-            teorico=prompt("Cuantas clases de teorico necesitas (En numeros porfavor)")
-            practico=prompt("Cuantas clases de practico necesitas (En numeros porfavor)")
-            alert("Tu presupuesto para unas "+ (parseInt(teorico)+parseInt(practico)) +" clases entre ellas "+teorico+ " teoricas y "+practico+" practicas tendrian un valor aproximado de " + (parseInt(teorico)*400+parseInt(practico)*700)+" pesos Argentinos")
-        }
-        else{
-            teorico=prompt("Cuantas clases de teorico necesitas (En numeros porfavor)")
-            practico=prompt("Cuantas clases de practico necesitas (En numeros porfavor)")
-            alert("Tu presupuesto para unas "+ (parseInt(teorico)+parseInt(practico)) +" clases entre ellas "+teorico+ " teoricas y "+practico+" practicas tendrian un valor aproximado de " + (parseInt(teorico)*400+parseInt(practico)*700)+" pesos Argentinos")
-        }
-           
-    }
+presupuesto.onsubmit= function informacionUsuario() {
+    event.preventDefault()
+    var resultado=document.getElementById("resultado")
+    resultado.innerHTML="Hola "+ presupuesto.nombreCompleto.value+ " tu numero de telefono es " + presupuesto.telefono.value + " vivis en la provincia de "+presupuesto.provincia.value+ " y tenes "+presupuesto.edad.value+" años . Elegiste para tener "+presupuesto.clasesPracticas.value +" clases practicas y "+presupuesto.clasesTeoricas.value
+    localStorage.setItem("Nombre del usuario",presupuesto.nombreCompleto.value)
+    localStorage.setItem("Numero de telefono usuario",presupuesto.telefono.value)
+    localStorage.setItem("Provincia de residencia usuario",presupuesto.provincia.value)
+    localStorage.setItem("Edad del usuario",presupuesto.edad.value)
+    localStorage.setItem("Edad del usuario",presupuesto.edad.value)
+    localStorage.setItem("Clases practicas",presupuesto.clasesPracticas.value)
+    localStorage.setItem("Clases teoricas",presupuesto.clasesTeoricas.value)
 
 }
-presupuesto()
+
