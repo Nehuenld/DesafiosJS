@@ -1,7 +1,20 @@
-
-$.noproblem();
-jQuery(document).ready(function(){
-  jQuery(".boton").click(function(){
-    jQuery("p").text("fuicoma");
-  });
+$('#boton').click(function() {
+   $.ajax({
+      url: 'https://api.joind.in/v2.1/talks/10889',
+      data: {
+         format: 'json'
+      },
+      error: function() {
+         $('#info').html('<p>ERRORR!!</p>');
+      },
+      dataType: 'jsonp',
+      success: function(data) {
+         var $titulo = $('<h1>').text(data.talks[0].talk_title);
+         var $descripcion = $('<p>').texto(data[0].descripcion);
+         $('#info')
+            .append($titulo)
+            .append($descripcion);
+      },
+      type: 'GET'
+   });
 });
