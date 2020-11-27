@@ -1,1 +1,7 @@
 
+$.noproblem();
+jQuery(document).ready(function(){
+  jQuery(".boton").click(function(){
+    jQuery("p").text("fuicoma");
+  });
+});
